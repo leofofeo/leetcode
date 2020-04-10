@@ -10,3 +10,13 @@ class Solution:
     
 def reverse_li(li):
     val = []
+    curr_li = li
+    next_is_not_none = True
+    while next_is_not_none:
+        val.append(curr_li.val)
+        if curr_li.next is None:
+            next_is_not_none = False
+        else:
+            curr_li = curr_li.next
+            
+    return val
